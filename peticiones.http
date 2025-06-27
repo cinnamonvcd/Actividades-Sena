@@ -1,0 +1,9 @@
+#listar generos 
+##GET http://127.0.0.1:5400/genero/
+##añadir genero
+POST http://127.0.0.1:5400/genero/
+Content-Type: application/json
+
+{
+    "nombre": "Romance"
+}
