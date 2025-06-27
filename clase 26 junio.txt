@@ -1,0 +1,50 @@
+26 junio de 2025
+
+subir la aplicación con render.com.shell
+hacer el mismo ejercicio de ayer con mongo atlas
+el ejemplo de hoy se hace con una base de datos local
+la tarea que se publique tiene que ser en mongo atlas próxima clase
+1 crear  las carpetas
+2 crear el entorno C:\Users\sena\actividades cesar\PELICULAS-FLASK-MONGO>python -m venv entorno (le crea automáticamente la carpeta)
+3 ingresar a la carpeta scripts y actirvarla 
+	cd entorno/Scripts
+	actívate.bat
+
+4 instalar flask pip install flask
+5 instalar pip install flask-mongoengine 
+6 todo eso se instala en el entorno 
+* el host 0.0.0 significa que se puede ejecutar desde cualquier ip que si se pone en la nube no importa que ip se le ponga el va a funcionar
+
+este ejercicio solo es con rutas para archivos json luego serán de las que vienen de un formulario
+
+{
+  "codigo": 21,
+  "titulo": "Superman",
+  "protagonista": "fulanito",
+  "duracion":120,
+  "resumen": "xxxxxx",
+  "foto":"",
+  "genero": "685dac21c56b53623a0bf6d6"
+}
+{
+  "codigo": 1,
+  "titulo": "Mean Girls",
+  "protagonista": "Rachel McAdams",
+  "duracion":100,
+  "resumen": "blablablabalbalbalba",
+  "foto":"",
+  "genero": "685dc17b9da5dc124882bb05"
+}
+como conectarla con atlas
+- instalar un librería (pip install python-dotenv)
+- crear un archivo en la raíz .env
+- dentro del archivo se pone uri=
+- se copia la ruta de mongo atlas de mongo db
+- también se puede desde atlas online
+- crear otro archivo .getignore 
+	este archivo lo ignore git y ahí se pueden guardar carpetas con contraseñas como env que va a tener la uri
+- modificar en app.py insertar 
+ from dotenv import load_dotenv
+import os
+llamarlo como si fuera una función -> load_dotenv()
+- al host se le asigna os.environ.get("URI")
