@@ -1,0 +1,11 @@
+## listar las peliculas
+
+#GET http://127.0.0.1:5400/pelicula/1
+
+##listar los generos
+#GET http://127.0.0.1:5400/genero/
+#eliminar pelicula por 
+
+#DELETE http://127.0.0.1:5400/eliminarPelicula/3
+#actualizar pelicula
+PUT http://127.0.0.1:5400/actualizarPelicula/
